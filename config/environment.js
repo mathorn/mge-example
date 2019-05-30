@@ -4,6 +4,7 @@
 module.exports = function(environment) {
   let ENV = {
     modulePrefix: 'mge',
+    podModulePrefix: 'mge/pods',
     environment,
     rootURL: '/',
     locationType: 'auto',
