@@ -1,1 +1,14 @@
-{{outlet}}
+<h5>Fragen</h5>
+{{#each model as |question|}}
+  question
+{{else}}
+  {{#if (or model.isLoaded error)}}
+    <div class="alert alert-danger" role="alert">
+      Keine Einträge gefunden
+    </div>
+  {{else}}
+    <div class="alert alert-warning" role="alert">
+      Lade Einträge...
+    </div>
+  {{/if}}
+{{/each}}
