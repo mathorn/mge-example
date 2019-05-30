@@ -1,0 +1,12 @@
+{{#liquid-unless hasAnswered}}
+  {{#bs-button class="btn-success" onClick=(action "handleAnswer" 1)}}Ja{{/bs-button}}
+  {{#bs-button class="btn-danger" onClick=(action "handleAnswer" 0)}}Nein{{/bs-button}}
+{{else if hasQuestions}}
+  <div class="alert alert-warning" role="alert">
+    Danke für die Nachricht!
+  </div>
+{{else}}
+  <div class="alert alert-success" role="alert">
+    Spitze!
+  </div>
+{{/liquid-unless}}
