@@ -6,8 +6,8 @@ module.exports = function(environment) {
     modulePrefix: 'mge',
     podModulePrefix: 'mge/pods',
     environment,
-    rootURL: '/',
-    locationType: 'auto',
+    rootURL: '/examples/mge/',
+    locationType: 'hash',
     EmberENV: {
       FEATURES: {
         // Here you can enable experimental features on an ember canary build
@@ -26,6 +26,7 @@ module.exports = function(environment) {
   };
 
   if (environment === 'development') {
+    ENV.rootURL = '/';
     // ENV.APP.LOG_RESOLVER = true;
     // ENV.APP.LOG_ACTIVE_GENERATION = true;
     // ENV.APP.LOG_TRANSITIONS = true;
