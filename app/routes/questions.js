@@ -5,7 +5,7 @@ export default Route.extend({
   setupController(controller) {
     this.store.findAll('question').then( response => {
       controller.set('model', response);
-    }, error => {
+    }, () => {
       controller.set('error', true);
     });
   }

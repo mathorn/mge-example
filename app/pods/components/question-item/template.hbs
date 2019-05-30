@@ -1,1 +1,30 @@
-{{yield}}
+<div class="card">
+  <button class="card-header d-flex justify-content-between align-items-center" onclick={{action "toggle"}}>
+    <h2>{{item.body}}</h2>
+    {{#bs-button class="close-button"}}&#10005;{{/bs-button}}
+  </button>
+  <div class="card-body">
+    {{#liquid-if (not collapsed)}}
+      <div class="body-wrapper">
+        <p class="card-text">
+          {{#liquid-spacer growDuration=500}}
+            {{#if answerNotFound}}
+              <div class="alert alert-danger" role="alert">
+                Keine Antwort gefunden
+              </div>
+            {{else if answerLoaded}}
+              {{html-safe answerText}}
+            {{else if showButtons}}
+              butt
+            {{else}}
+              <div class="alert alert-warning" role="alert">
+                Lade Antwort...
+              </div>
+            {{/if}}
+          {{/liquid-spacer}}
+        </p>
+      </div>
+    {{/liquid-if}}
+  </div>
+
+</div>

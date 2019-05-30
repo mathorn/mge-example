@@ -1,6 +1,6 @@
 <h5>Fragen</h5>
 {{#each model as |question|}}
-  question
+  {{question-item question}}
 {{else}}
   {{#if (or model.isLoaded error)}}
     <div class="alert alert-danger" role="alert">
